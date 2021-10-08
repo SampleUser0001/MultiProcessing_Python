@@ -8,6 +8,7 @@ from importenv import ImportEnvKeyEnum
 import importenv as setting
 
 from fork import Fork
+from pipesample import PipeSample
 
 PYTHON_APP_HOME = os.getenv('PYTHON_APP_HOME')
 logger = getLogger(__name__)
@@ -29,5 +30,7 @@ if __name__ == '__main__':
   
   if args[1] == 'fork':
     Fork.main()
+  elif args[1] == 'pipe':
+    PipeSample().main()
   else:
     ValueError('{} is not defined.'.format(args[1]))
