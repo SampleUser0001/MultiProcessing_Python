@@ -10,6 +10,7 @@ import importenv as setting
 from fork import Fork
 from pipesample import PipeSample
 from sharedctypes import Sharedctypes
+from process_pool import ProcessPool
 
 PYTHON_APP_HOME = os.getenv('PYTHON_APP_HOME')
 logger = getLogger(__name__)
@@ -32,8 +33,11 @@ if __name__ == '__main__':
   if args[1] == 'fork':
     Fork.main()
   elif args[1] == 'pipe':
-    PipeSample().main()
+    PipeSample.main()
   elif args[1] == 'sharedctypes':
-    Sharedctypes().main()
+    Sharedctypes.main()
+  elif args[1] == 'process_pool':
+    process_pool = ProcessPool(int(args[2]))
+    process_pool.main()
   else:
     ValueError('{} is not defined.'.format(args[1]))

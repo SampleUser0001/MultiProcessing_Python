@@ -4,7 +4,7 @@ FROM python:latest
 RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 RUN python -m pip install --upgrade pip
-RUN pip install python-dotenv
+RUN pip install python-dotenv gmaps
 
 WORKDIR /opt/app
 

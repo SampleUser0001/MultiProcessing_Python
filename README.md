@@ -30,6 +30,16 @@ docker-compose run python pipe
 docker-compose run python sharedctypes
 ```
 
+### Pool
+
+プロセスプール。**配列を**マルチプロセスで処理する手段を提供する。  
+プロセス数=コア数が効率が良さそう。それ以上はオーバーヘッドの影響で遅くなる。  
+このサンプルではPool.mapメソッドを使用しているが、ほかにもメソッドが提供されている。
+
+``` sh
+docker-compose run python process_pool ${プロセス数}
+```
+
 ## 参考
 
 - [【Python】マルチプロセスについて:Qiita](https://qiita.com/y518gaku/items/db3b0ced6d62b616f961)
