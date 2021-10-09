@@ -9,6 +9,7 @@ import importenv as setting
 
 from fork import Fork
 from pipesample import PipeSample
+from sharedctypes import Sharedctypes
 
 PYTHON_APP_HOME = os.getenv('PYTHON_APP_HOME')
 logger = getLogger(__name__)
@@ -32,5 +33,7 @@ if __name__ == '__main__':
     Fork.main()
   elif args[1] == 'pipe':
     PipeSample().main()
+  elif args[1] == 'sharedctypes':
+    Sharedctypes().main()
   else:
     ValueError('{} is not defined.'.format(args[1]))
