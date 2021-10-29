@@ -11,6 +11,7 @@ from fork import Fork
 from pipesample import PipeSample
 from sharedctypes import Sharedctypes
 from process_pool import ProcessPool
+from multi_args import MultiArgs
 
 PYTHON_APP_HOME = os.getenv('PYTHON_APP_HOME')
 logger = getLogger(__name__)
@@ -39,5 +40,7 @@ if __name__ == '__main__':
   elif args[1] == 'process_pool':
     process_pool = ProcessPool(int(args[2]))
     process_pool.main()
+  elif args[1] == 'multi_args':
+    MultiArgs.run()
   else:
     ValueError('{} is not defined.'.format(args[1]))

@@ -40,6 +40,14 @@ docker-compose run python sharedctypes
 docker-compose run python process_pool ${プロセス数}
 ```
 
+#### Pool.mapメソッドに複数引数を渡す
+
+通常1つしか渡せない。
+
+``` sh
+docker-compose run python multi_args
+```
+
 ## 参考
 
 - [【Python】マルチプロセスについて:Qiita](https://qiita.com/y518gaku/items/db3b0ced6d62b616f961)
